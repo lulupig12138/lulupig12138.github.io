@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SceneDecorator: Towards Scene-Oriented Story Generation with Scene Planning and Scene Consistency</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">SceneDecorator: Towards Scene-Oriented Story Generation with Scene Planning and Scene Consistency</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Quanjian Song</a><sup>1,*</sup>,
+                            </span>
+                            <!--  -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Donghao Zhou</a><sup>2,*†</sup>,
+                            </span>
+                            <!--  -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Jingyu Lin</a><sup>1,*†</sup>, 
+                            </span>
+                            <!--  -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Fei Shen</a><sup>3</sup>,
+                            </span>
+                            <br>
+                            <span class="author-block">
+                                <a href="" target="_blank">Jiaze Wang</a><sup>2</sup>,
+                            </span>
+                            <!--  -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Xiaowei Hu</a><sup>4,‡</sup>,
+                            </span>
+                            <!--  -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Cunjian Chen</a><sup>1,‡</sup>,
+                            </span>
+                            <!--  -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Pheng-Ann Heng</a><sup>2</sup>,
+                            </span>
+                        </div>
+
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"> <sup>1</sup>Monash University</span>
+                            <span class="author-block"> <sup>2</sup>The Chinese University of Hong Kong</span>
+                            <br>
+                            <span class="author-block"> <sup>3</sup>National University of Singapore</span>
+                            <span class="author-block"> <sup>4</sup>South China University of Technology</span>
+                            <br>
+                            <span class="eql-cntrb"><small><sup>*</sup> Equal contribution.</small></span>
+                            <span class="eql-cntrb"><small><sup>†</sup> Project lead.</small></span>
+                            <span class="eql-cntrb"><small><sup>‡</sup> Corresponding authors.</small></span>
+                            <br>
+                            <span class="author-block">Accepted to NeurIPS 2025</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Paper PDF link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                                <!-- Hugging Face link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <img src="static/images/hf.png" alt="Hugging Face">
+                                        </span>
+                                        <span>Hugging Face</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- TL;DR: -->
+                        <h2 class="content has-text-justified">
+                            <b>TL;DR: </b>
+                            We propose <b>SceneDecorator</b>, a training-free framework for <i></i>scene-oriented story generation</i>.
+                            It integrates </i>VLM-Guided Scene Planning</i> and <i>Long-Term Scene-Sharing Attention</i>
+                            to tackle two key challenges: <i>scene planning</i> and <i>scene consistency</i>, which have been largely overlooked by previous work.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Teaser-->
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <h2 class="title is-2">SceneDecorator</h2>
+                        <div class="content has-text-justified">
+                            <div class="columns is-centered has-text-justified">
+                                <td colspan="3">
+                                    <img src="static/images/teaser.png" alt="framework" width="1000" />
+                                </td>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End teaser -->
+
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Recent text-to-image models have revolutionized image generation, but they still struggle with maintaining concept consistency across generated images.
+                            While existing works focus on character consistency, they often overlook the crucial role of scenes in storytelling, which restricts their creativity in practice.
+                            This paper introduces <i>scene-oriented story generation</i>, addressing two key challenges:
+                            (i) <i>scene planning</i>, where current methods fail to ensure scene-level narrative coherence by relying solely on text descriptions, and
+                            (ii) <i>scene consistency</i>, which remains largely unexplored in terms of maintaining scene consistency across multiple stories.
+                            We propose <b>SceneDecorator</b>, a training-free framework that employs <i>VLM-Guided Scene Planning</i> to ensure narrative coherence across different scenes in a "global-to-local" manner,
+                            and <i>Long-Term Scene-Sharing Attention</i> to maintain long-term scene consistency and subject style diversity across generated stories.
+                            Extensive experiments demonstrate the superior performance of SceneDecorator, highlighting its potential to unleash creativity in the fields of arts, films, and games.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+
+
+    <!-- Paper method -->
+    <section class="section hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-">
+                        <h2 class="title is-2">Methodology</h2>
+                        <div class="content has-text-justified">
+                            <td colspan="3">
+                                <p>
+                                    In this work, we design a training-free framework called <b>SceneDecorator</b>, to address two key challenges in story generation: <i>scene planning</i> and <i>scene consistency</i>.
+                                    SceneDecorator comprises two core techniques:
+                                    (i) <i>VLM-Guided Scene Planning.</i>
+                                    Leveraging a powerful Vision-Language Model (VLM) as a director, it decomposes user-provided themes into local scenes and story sub-prompts in a ''global-to-local'' manner.
+                                    (ii) <i>Long-Term Scene-Sharing Attention.</i>
+                                    By simultaneously integrating mask-guided scene injection, scene-sharing attention, and extrapolable noise blending, it maintains subject style diversity and long-term scene consistency in story generation.
+                                    Overall framework is shown below:
+                                </p>
+                            </td>
+                        </div>
+                        <br>
+                        <div class="columns is-centered has-text-justified">
+                            <td colspan="3">
+                                <img src="static/images/overall_pipeline.png" alt="framework" width="1000" />
+                            </td>
+                        </div>
+                    </div>
+    </section>
+    <!--End paper poster -->
+
+
+
+
+
+    <!-- Qualitative Comparisons -->
+    <section class="hero is-light is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Qualitative Comparisons</h2>
+        </div>
+        <!--  -->
+        <div class="columns is-centered has-text-justified">
+            <td colspan="3">
+                <img src="static/images/qualitative_comparison.png" alt="framework" width="1000" />
+            </td>
+        </div>
+    </section>
+    <!--End qualitative comparisons -->
+
+
+    <!-- More applications -->
+    <section class="hero is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">More Applications</h2>
+        </div>
+        <!--  -->
+        <div class="column has-text-centered">
+            <div class="content has-text-centered">
+                <h4 class="title is-4">Manual Scene Input and Consistent Character</h4>
+            </div>
+            <!--  -->
+            <div class="columns is-centered has-text-justified">
+                <td colspan="3">
+                    <img src="static/images/app1-2.png" alt="framework" width="1000"/>
+                </td>
+            </div>
+            <!--  -->
+            <div class="content has-text-centered" style="margin-top: 3rem;">
+                <h4 class="title is-4">Generation with Generative Tools</h4>
+            </div>
+            <!--  -->
+            <div class="columns is-centered has-text-justified">
+                <td colspan="3">
+                    <img src="static/images/app3.png" alt="framework" width="1000"/>
+                </td>
+            </div>
+        </div>
+        <!--  -->
+        </div>
+    </section>
+    <!--End more applications -->
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="hero-body">
+        <div class="container is-max-desktop content" margin: 0 auto;>
+            <h2 class="title">BibTeX</h2>
+            <pre>
+<code>XXX
+
+</code>    
+            </pre>
+        </div>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                            Commons Attribution-ShareAlike 4.0 International License</a>.
+                            Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. If you want to reuse their <a
+                            href="https://github.com/nerfies/nerfies.github.io">source code</a>, please credit them appropriately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+            videoWrappers.forEach(wrapper => {
+                const defaultVideo = wrapper.querySelector('.default-video');
+                const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+                const height = wrapper.offsetWidth / aspectRatio;
+
+                wrapper.style.height = `${height}px`;
+
+                wrapper.addEventListener('mouseenter', () => {
+                    defaultVideo.pause();
+                    hoverVideo.play();
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    defaultVideo.play();
+                    hoverVideo.pause();
+                });
+            });
+        });
+        $(document).ready(function () {
+            var carouselItems = $('.carousel .item');
+            var numItems = carouselItems.length;
+            var numVideos = 5;
+            var currentIndex = 0;
+
+            $('.carousel').on('click', function () {
+                currentIndex++;
+                if (currentIndex + numVideos <= numItems) {
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                } else {
+                    currentIndex = 0;
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                }
+            });
+
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+        });
+    </script>
+
+</body>
+
+</html>
