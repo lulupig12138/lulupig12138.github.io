@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation</h1>
+                        
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="" target="_blank">Quanjian Song</a><sup>1,2*</sup>,</span>
+                            <span class="author-block">
+                                <a href=""
+                                    target="_blank">Yiren Song</a><sup>1,2*</sup>,</span>
+                            <span class="author-block">
+                                <a href=""
+                                    target="_blank">Kelly Peng</a><sup>2</sup>, </span>
+                            <span class="author-block">
+                                <a href=""
+                                    target="_blank">Yuan Gao</a><sup>2</sup>, </span>
+                            <span class="author-block">
+                                <a href="" target="_blank">Mike Zheng Shou</a><sup>1,†</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"> <sup>1</sup>Show Lab, National University of Singapore</span>
+                            <span class="author-block"> <sup>2</sup>First Intelligence</span>
+                            <br>
+                            <span class="eql-cntrb"><small><sup>*</sup>Equal contribution.</small></span>
+                            <span class="eql-cntrb"><small><sup>†</sup>Corresponding author.</small></span>
+                            <br>
+                            <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Paper PDF link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/showlab/WorldWander" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                                <!-- Hugging Face link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <img src="static/images/hf.png" alt="Hugging Face">
+                                        </span>
+                                        <span>Datasets</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- TL;DR: -->
+                        <h2 class="content has-text-justified">
+                            <b>TL;DR: </b>
+                            We propose WorldWander, an in-context learning framework for translating between egocentric and exocentric worlds in video generation.
+                            We also release <a target="_blank">EgoExo-8K</a>, a large-scale dataset containing synchronized egocentric–exocentric triplets.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+        <div class="container is-max-desktop" style="width: 100%; margin: auto;">
+            <div class="hero-body">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <h2 class="title is-2">Teaser</h2>
+                        <div class="content has-text-justified">
+                            <div id="results-carousel" class="carousel results-carousel" align="center">
+                                <!--  -->
+                                <div class="item item-video1" style="text-align: center;">
+                                    <h4 style="margin-bottom: 25px; font-size: 20px; font-weight: 700;">
+                                        Egocentric-to-Exocentric
+                                    </h4>
+                                
+                                    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                                
+                                        <!-- Column 1 -->
+                                        <div style="width: 28%; display: flex; flex-direction: column; align-items: center;">
+                                            <h6 style="margin-bottom: 10px;">Reference Image</h6>
+                                
+                                            <div>
+                                                <img src="static/videos/demo/case1/reference.png"
+                                                     style="width:100%; height:auto; object-fit:contain;">
+                                            </div>
+                                
+                                            <div>
+                                                <img src="static/videos/demo/case2/reference.png"
+                                                     style="width:100%; height:auto; object-fit:contain;">
+                                            </div>
+                                
+                                            <div>
+                                                <img src="static/videos/demo/case3/reference.png"
+                                                     style="width:100%; height:auto; object-fit:contain;">
+                                            </div>
+                                        </div>
+                                
+                                        <!-- Column 2 -->
+                                        <div style="width: 28%; display: flex; flex-direction: column; align-items: center;">
+                                            <h6 style="margin-bottom: 10px;"><b>Original Video</b></h6>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case1/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case2/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case3/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                
+                                        <!-- Column 3 -->
+                                        <div style="width: 28%; display: flex; flex-direction: column; align-items: center;">
+                                            <h6 style="margin-bottom: 10px;">Output Video</h6>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case1/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case2/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case3/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                                
+                                <!--  -->
+
+                                <div class="item item-video2" style="text-align: center;">
+                                    <h4 style="margin-bottom: 25px; font-size: 20px; font-weight: 700;">
+                                        Exocentric-to-Egocentric
+                                    </h4>
+
+                                    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">                                
+                                        <!-- Column 1 -->
+                                        <div style="width: 40%;">
+                                            <h6 style="margin-bottom: 10px;"><b>Original Video</b></h6>
+                                
+                                            <div style="margin-bottom: 15px;">
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case4/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case5/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                
+                                        <!-- Column 2 -->
+                                        <div style="width: 40%;">
+                                            <h6 style="margin-bottom: 10px;">Output Video</h6>
+                                
+                                            <div style="margin-bottom: 15px;">
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case4/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case5/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item item-video3" style="text-align: center;">
+                                    <h4 style="margin-bottom: 25px; font-size: 20px; font-weight: 700;">
+                                        Egocentric-to-Exocentric
+                                    </h4>
+                                
+                                    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                                
+                                        <!-- Column 1 -->
+                                        <div style="width: 28%; display: flex; flex-direction: column; align-items: center;">
+                                            <h6 style="margin-bottom: 10px;">Reference Image</h6>
+                                
+                                            <div>
+                                                <img src="static/videos/demo/case6/reference.png"
+                                                     style="width:100%; height:auto; object-fit:contain;">
+                                            </div>
+                                
+                                            <div>
+                                                <img src="static/videos/demo/case7/reference.png"
+                                                     style="width:100%; height:auto; object-fit:contain;">
+                                            </div>
+                                
+                                            <div>
+                                                <img src="static/videos/demo/case8/reference.png"
+                                                     style="width:100%; height:auto; object-fit:contain;">
+                                            </div>
+                                        </div>
+                                
+                                        <!-- Column 2 -->
+                                        <div style="width: 28%; display: flex; flex-direction: column; align-items: center;">
+                                            <h6 style="margin-bottom: 10px;"><b>Original Video</b></h6>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case6/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case7/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case8/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                
+                                        <!-- Column 3 -->
+                                        <div style="width: 28%; display: flex; flex-direction: column; align-items: center;">
+                                            <h6 style="margin-bottom: 10px;">Output Video</h6>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case6/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case7/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case8/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                                
+                                <!--  -->
+
+                                <div class="item item-video4" style="text-align: center;">
+                                    <h4 style="margin-bottom: 25px; font-size: 20px; font-weight: 700;">
+                                        Exocentric-to-Egocentric
+                                    </h4>
+
+                                    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">                                
+                                        <!-- Column 1 -->
+                                        <div style="width: 40%;">
+                                            <h6 style="margin-bottom: 10px;"><b>Original Video</b></h6>
+                                
+                                            <div style="margin-bottom: 15px;">
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case9/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case10/original.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                
+                                        <!-- Column 2 -->
+                                        <div style="width: 40%;">
+                                            <h6 style="margin-bottom: 10px;">Output Video</h6>
+                                
+                                            <div style="margin-bottom: 15px;">
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case9/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                
+                                            <div>
+                                                <video autoplay muted loop playsinline controls
+                                                       style="width:100%; height:auto; object-fit:contain;">
+                                                    <source src="static/videos/demo/case10/output.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--  -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End teaser video -->
+
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Video diffusion models have recently achieved remarkable progress in realism and controllability.
+                            However, achieving seamless video translation across different perspectives, such as first-person (egocentric) and third-person (exocentric), remains underexplored.
+                            Bridging these perspectives is crucial for filmmaking, embodied AI, and world models.
+                            Motivated by this, we present WorldWander, an in-context learning framework tailored for translating between egocentric and exocentric worlds in video generation.
+                            Building upon advanced video diffusion transformers, WorldWander integrates (i) In-Context Perspective Alignment and (ii) Collaborative Position Encoding to efficiently model cross-view synchronization.
+                            To further support our task, we curate EgoExo-8K, a large-scale dataset containing synchronized egocentric–exocentric triplets from both synthetic and real-world scenarios.
+                            Experiments demonstrate that WorldWander achieves superior perspective synchronization, character consistency, and generalization, setting a new benchmark for egocentric-exocentric video translation.
+                            Our code is released at <a href="https://github.com/showlab/WorldWander" target="_blank"
+                                style="color: #3399FF;">GitHub.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+
+
+    <!-- Paper method -->
+    <section class="section hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-">
+                        <h2 class="title is-2">Method</h2>
+                        <div class="content has-text-justified">
+                            <td colspan="3">
+                                <p>
+                                    In this work, we propose <b>WorldWander</b>, an in-context learning framework that
+                                    bridges first-person (egocentric) and third-person (exocentric) perspectives in video generation,
+                                    enabling immersive and character-centric exploration of virtual worlds.
+                                    Building upon advanced video diffusion transformers, WorldWander integrates
+                                    the <i>In-Context Perspective Alignment</i> paradigm and the <i>Collaborative Position Encoding</i> strategy,
+                                    which jointly model perspective correspondence without relying on auxiliary networks.
+                                    The overall pipeline is shown in the following:
+                                </p>
+                            </td>
+                        </div>
+                        <div class="columns is-centered has-text-justified">
+                            <td colspan="3">
+                                <img src="static/images/overall_pipeline.png" alt="framework" width="1000" />
+                            </td>
+                        </div>
+                        <p><br></p>
+                    </div>
+    </section>
+    <!--End paper poster -->
+
+
+    <section class="hero is-light is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">EgoExo-8K</h2>
+        </div>
+        <!-- Exocentric-to-Egocentric -->
+        <section class="video-grid" style="margin-top: 10px;">
+            <div class="container" style="width: 90%; margin: auto;">
+                <!-- 滑动 -->
+                <div id="results-carousel" class="carousel results-carousel" align="center">
+                    <div class="item item-video1" style="text-align: center;">
+                        <h4 style="margin-bottom: 25px; font-size: 20px; font-weight: 700;">
+                            Synthetic Scenarios
+                        </h4>
+                        <video autoplay muted loop playsinline controls
+                            style="width:90%; height:auto; object-fit:contain;">
+                            <source src="static/videos/egoexo-8k/case1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video2" style="text-align: center;">
+                        <h4 style="margin-bottom: 25px; font-size: 20px; font-weight: 700;">
+                            Real-World Scenarios
+                        </h4>
+                        <video autoplay muted loop playsinline controls
+                            style="width:90%; height:auto; object-fit:contain;">
+                            <source src="static/videos/egoexo-8k/case2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </section>
+    
+    
+
+
+
+    <!-- Visual Gallery -->
+    <section class="hero is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Visual Gallery</h2>
+        </div>
+        
+        <!-- Exocentric-to-Egocentric -->
+        <section class="video-grid" style="margin-top: 10px;">
+            <div class="container" style="width: 90%; margin: auto;">
+                <div class="content has-text-centered" style="margin-top: 0rem;">
+                    <h3 class="title is-4">Exocentric-to-Egocentric</h3>
+                </div>
+                <!-- 滑动 -->
+                <div id="results-carousel" class="carousel results-carousel" align="center">
+                    <div class="item item-video1" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:44%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case1/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="width:44%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case1/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video2" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:44%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case2/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="width:44%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case2/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video3" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:44%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case3/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="width:44%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case3/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video4" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:44%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case4/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="width:44%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case4/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video5" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:44%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case5/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="width:44%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case5/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video6" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:44%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case6/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="width:44%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case6/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video7" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:44%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case7/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div style="width:44%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/three2one/case7/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Egocentric-to-Exocentric -->
+        <section class="video-grid" style="margin-top: 20px;">
+            <div class="container" style="width: 90%; margin: auto;">
+                <div class="content has-text-centered" style="margin-top: 1rem;">
+                    <h3 class="title is-4">Egocentric-to-Exocentric</h3>
+                </div>
+                <!-- 滑动 -->
+                <div id="results-carousel" class="carousel results-carousel" align="center">
+                    <div class="item item-video1" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:29%;">
+                                <div>Reference Image</div>
+                                <img src="static/videos/gallery/one2three/case1/reference.png"
+                                    style="width:100%; height:auto; object-fit:contain;">
+                            </div>
+
+                            <div style="width:29%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case1/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                    
+                            <div style="width:29%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case1/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video2" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:29%;">
+                                <div>Reference Image</div>
+                                <img src="static/videos/gallery/one2three/case2/reference.png"
+                                    style="width:100%; height:auto; object-fit:contain;">
+                            </div>
+
+                            <div style="width:29%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case2/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                    
+                            <div style="width:29%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case2/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video3" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:29%;">
+                                <div>Reference Image</div>
+                                <img src="static/videos/gallery/one2three/case3/reference.png"
+                                    style="width:100%; height:auto; object-fit:contain;">
+                            </div>
+
+                            <div style="width:29%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case3/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                    
+                            <div style="width:29%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case3/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video4" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:29%;">
+                                <div>Reference Image</div>
+                                <img src="static/videos/gallery/one2three/case4/reference.png"
+                                    style="width:100%; height:auto; object-fit:contain;">
+                            </div>
+
+                            <div style="width:29%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case4/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                    
+                            <div style="width:29%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case4/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video5" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                            <div style="width:29%;">
+                                <div>Reference Image</div>
+                                <img src="static/videos/gallery/one2three/case5/reference.png"
+                                    style="width:100%; height:auto; object-fit:contain;">
+                            </div>
+
+                            <div style="width:29%;">
+                                <div>Original Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case5/input.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                    
+                            <div style="width:29%;">
+                                <div>Output Video</div>
+                                <video autoplay muted loop playsinline controls
+                                    style="width:100%; height:auto; object-fit:contain;">
+                                    <source src="static/videos/gallery/one2three/case5/output.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+
+
+
+
+    <!-- Comparison -->
+    <section class="hero is-light is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Qualitative Comparison</h2>
+        </div>
+        <div class="column">
+            <div class="column has-text-centered">
+                <div style="width: 90%; margin: auto;">
+                    <!--  -->
+                    <div class="content has-text-centered" style="margin-top: 0rem;">
+                        <h3 class="title is-4">Exocentric-to-Egocentric</h3>
+                    </div>
+                    <!-- 插入滑动逻辑 -->
+                    <div id="results-carousel" class="carousel results-carousel" align="center">
+                        <div class="item item-video1" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                        
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case1/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case1/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case1/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case1/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case1/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case1/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case1/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--  -->
+                        
+                        <div class="item item-video2" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                        
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case2/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case2/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case2/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case2/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case2/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case2/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case2/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--  -->
+                        
+                        <div class="item item-video3" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case3/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case3/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case3/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case3/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case3/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case3/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case3/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        
+                        <div class="item item-video4" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case4/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case4/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case4/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case4/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case4/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case4/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case4/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="item item-video5" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case5/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case5/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case5/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case5/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case5/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case5/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/three2one/case5/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--  -->
+                    <div class="content has-text-centered" style="margin-top: 3rem;">
+                        <h3 class="title is-4">Egocentric-to-Exocentric</h3>
+                    </div>
+                    <!-- 插入滑动逻辑 -->
+                    <div id="results-carousel" class="carousel results-carousel" align="center">
+                        <div class="item item-video1" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Reference Image</div>
+                                    <img src="static/videos/comparison/one2three/case1/Reference.png"
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case1/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case1/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case1/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                            </div>
+                        
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case1/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case1/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case1/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case1/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--  -->
+
+                        <div class="item item-video2" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Reference Image</div>
+                                    <img src="static/videos/comparison/one2three/case2/Reference.png"
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case2/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case2/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case2/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                            </div>
+                        
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case2/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case2/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case2/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case2/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        
+                        <div class="item item-video3" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Reference Image</div>
+                                    <img src="static/videos/comparison/one2three/case3/Reference.png"
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case3/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case3/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case3/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                            </div>
+                        
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case3/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case3/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case3/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case3/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="item item-video4" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Reference Image</div>
+                                    <img src="static/videos/comparison/one2three/case4/Reference.png"
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case4/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case4/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case4/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                            </div>
+                        
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case4/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case4/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case4/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case4/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        
+                        <div class="item item-video5" style="text-align: center;">
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>Reference Image</div>
+                                    <img src="static/videos/comparison/one2three/case5/Reference.png"
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case5/Original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div><b>WorldWander (Ours)</b></div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case5/Ours.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case5/GT.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                            </div>
+                        
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <div style="width:22%;">
+                                    <div>AnyV2V</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case5/AnyV2V.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>I2VEdit</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case5/I2VEdit.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>TrajectoryCrafter</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case5/TrajectoryCrafter.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:22%;">
+                                    <div>RecamMaster</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/comparison/one2three/case5/RecamMaster.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+                <!--  -->
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="hero is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Ablation Study</h2>
+        </div>
+        <div class="column">
+            <div class="column has-text-centered">
+                <div style="width: 90%; margin: auto;">
+                    <!-- 插入滑动逻辑 -->
+                    <div id="results-carousel" class="carousel results-carousel" align="center">
+                        <div class="item item-video1" style="text-align: center;">
+                            <h4 style="margin-bottom: 10px; font-size: 20px; font-weight: 700;">
+                                Exocentric-to-Egocentric
+                            </h4>
+                            
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:29%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/three2one/original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:29%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/three2one/gt.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <div style="width:29%;">
+                                    <div>Full Components</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/three2one/full.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:29%;">
+                                    <div>Channel-Wise Concatenation</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/three2one/channel.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:29%;">
+                                    <div>Uniform Position Encoding</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/three2one/unoform.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--  -->
+                        
+                        <div class="item item-video2" style="text-align: center;">
+                            <h4 style="margin-bottom: 10px; font-size: 20px; font-weight: 700;">
+                                Egocentric-to-Exocentric
+                            </h4>
+                            
+                            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div style="width:29%;">
+                                    <div>Reference Image</div>
+                                    <img src="static/videos/ablation/one2three/reference.png"
+                                            style="width:100%; height:auto; object-fit:contain;">
+                                </div>
+                        
+                                <div style="width:29%;">
+                                    <div>Original Video</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/one2three/original.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:29%;">
+                                    <div>Ground True</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/one2three/gt.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <div style="width:29%;">
+                                    <div>Full Components</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/one2three/full.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:29%;">
+                                    <div>Channel-Wise Concatenation</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/one2three/channel.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        
+                                <div style="width:29%;">
+                                    <div>Uniform Position Encoding</div>
+                                    <video autoplay muted loop playsinline controls
+                                        style="width:100%; height:auto; object-fit:contain;">
+                                        <source src="static/videos/ablation/one2three/unoform.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  -->
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="hero-body">
+        <div class="container is-max-desktop content" margin: 0 auto;>
+            <h2 class="title">BibTeX</h2>
+            <pre><code>XXX
+</code></pre>
+        </div>
+    </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a>, <a
+                                href="https://gongyeliu.github.io/StyleCrafter.github.io"
+                                target="_blank">StyleCrafter</a> and <a href="https://tiger-ai-lab.github.io/AnyV2V"
+                                target="_blank">AnyV2V</a>.
+                            You are free to borrow the source code of this website, we just ask that you link back to
+                            this page in the footer. <br> This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+            videoWrappers.forEach(wrapper => {
+                const defaultVideo = wrapper.querySelector('.default-video');
+                const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+                const height = wrapper.offsetWidth / aspectRatio;
+
+                wrapper.style.height = `${height}px`;
+
+                wrapper.addEventListener('mouseenter', () => {
+                    defaultVideo.pause();
+                    hoverVideo.play();
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    defaultVideo.play();
+                    hoverVideo.pause();
+                });
+            });
+        });
+        $(document).ready(function () {
+            var carouselItems = $('.carousel .item');
+            var numItems = carouselItems.length;
+            var numVideos = 5;
+            var currentIndex = 0;
+
+            $('.carousel').on('click', function () {
+                currentIndex++;
+                if (currentIndex + numVideos <= numItems) {
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                } else {
+                    currentIndex = 0;
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                }
+            });
+
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+        });
+    </script>
+
+</body>
+
+</html>
